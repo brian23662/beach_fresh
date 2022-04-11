@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Cart;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +26,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        View::composer('*', function ($view) {
+            $view->with('cart', Cart::bySession()->first());
+        });
+
+        Blade::directive('money', function ($expression) {
+            return "<?php echo Laravel\Cashier\Cashier::formatAmount($expression, config('cashier.currency')); ?>";
+        });
     }
 }

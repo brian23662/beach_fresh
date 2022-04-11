@@ -1,8 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +25,8 @@ Route::get('/', HomeController::class)->name('home');
 
 Route::get('/products/{product:slug}', [ProductController::class, 'show'])
     ->name('products.show');
+
+Route::get('/cart', [CartController::class, 'index'])
+    ->name('cart.index');
 
 require __DIR__ . '/auth.php';
