@@ -14,12 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', HomeController::class)->name('home');
+// Route::get('/', HomeController::class)->name('home');
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/products/{product:slug}', [ProductController::class, 'show'])
     ->name('products.show');
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
