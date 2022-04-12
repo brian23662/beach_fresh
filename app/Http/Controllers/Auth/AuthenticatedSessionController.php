@@ -36,7 +36,7 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
 
         optional($cart)->update([
-            'session_id' => session()->getId(), 
+            'session_id' => session()->getId(),
             'user_id' => auth()->id()
         ]);
 
