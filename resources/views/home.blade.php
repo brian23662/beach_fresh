@@ -11,7 +11,8 @@
                 @foreach ($products as $product)
                     <a href="{{ route('products.show', $product) }}" class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
                         <h1 class="text-lg font-semibold mb-2">{{ $product->title }}</h1>
-                        <div>@money($product->price)</div>
+                        <img src="{{ $product->file_path }}" width="150" height="150">
+                        <div>{{ $product->price }}</div>
                         <p>{{ $product->description }}</p>
                     </a>
                 @endforeach
@@ -19,3 +20,4 @@
         </div>
     </div>
 </x-app-layout>
+
