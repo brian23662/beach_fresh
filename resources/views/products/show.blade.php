@@ -10,6 +10,8 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
                     <h1 class="text-lg font-semibold mb-2">{{ $product->title }}</h1>
+                    <img src="{{ $product->file_path }}" width="300" height="300">
+                    <p>{{ $product->file_path }}</p>
                     <div>@money($product->price)</div>
                     <p>{{ $product->description }}</p>
 
