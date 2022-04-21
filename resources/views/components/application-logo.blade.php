@@ -1,6 +1,6 @@
 
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1015.8184 1927.8806" enable-background="new 0 0 1015.8184 1927.8806" xml:space="preserve" {{ $attributes }}>
+	 viewBox="0 0 150 285" enable-background="new 0 0 150 285" xml:space="preserve" {{ $attributes }}>
 <g>
 	<path d="M493.4169,1202.5516c-0.8819,6.3666-1.3477,11.9585-1.3039,17.6316c0.1503,19.4536-1.9453,38.8129-2.6281,58.2305
 		c-0.2612,7.429-1.3848,14.7627-1.4586,22.2358c-0.0905,9.166-1.7173,18.3115-2.565,27.4766
