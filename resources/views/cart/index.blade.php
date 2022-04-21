@@ -14,7 +14,7 @@
                             <div class="font-semibold">{{ $product->title }}</div>
 
                             <div>@money($product->price)</div>
-
+                            <img src="{{ $product->file_path }}"width="150" height="150">    
                             <form action="{{ route('cart.products.destroy', $product) }}" method="post">
                                 @csrf
                                 @method('DELETE')
