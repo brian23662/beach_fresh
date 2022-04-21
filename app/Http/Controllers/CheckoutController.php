@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class CheckoutController extends Controller
@@ -24,5 +25,26 @@ class CheckoutController extends Controller
         return view('checkout.index', [
             'checkout' => $checkout
         ]);
+    }
+
+    public function store(Request $request)
+    {
+        $product = Product::findOrFail($request->product_id);
+
+        $cart = Cart::firstOrCreate([
+            'user_id' => auth()->id(),
+            'session_id' => session()->getId()
+        ]);
+
+        $cart->products()->syncWithoutDetaching($product);
+
+        return back();
+    }
+
+    public function destroy(Product $product)
+    {
+        $cart = Cart::bySession()->first()->products()->detach($product);
+
+        return back();
     }
 }
