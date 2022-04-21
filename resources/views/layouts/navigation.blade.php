@@ -18,6 +18,9 @@
                     <x-nav-link :href="route('cart.index')" :active="request()->routeIs('cart.index')">
                         Cart ({{ optional(optional($cart)->products)->count() ?? 0 }})
                     </x-nav-link>
+                    <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
+                        About
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -75,7 +78,11 @@
                 {{ __('Products') }}
             </x-responsive-nav-link>
         </div>
-
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('about')" :active="request()->routeIs('about')">
+                About
+            </x-responsive-nav-link>
+        </div>
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             @auth

@@ -9,6 +9,7 @@ use App\Http\Controllers\WebhookController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CartProductController;
 use App\Http\Controllers\ProductDownloadController;
+use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,8 @@ use App\Http\Controllers\ProductDownloadController;
 */
 
 Route::get('/', HomeController::class)->name('home');
+
+Route::get('/', AboutController::class)->name('about');
 
 Route::get('/products/{product:slug}', [ProductController::class, 'show'])
     ->name('products.show');
