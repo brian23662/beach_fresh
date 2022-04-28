@@ -18,7 +18,6 @@
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">
-            Guest
             {{ $slot }}
         </div>
     </body>
