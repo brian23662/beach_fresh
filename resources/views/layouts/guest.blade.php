@@ -15,7 +15,6 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
-        <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">
