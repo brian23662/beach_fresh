@@ -30,6 +30,7 @@
 
             <!-- Page Content -->
             <main>
+                App
                 {{ $slot }}
             </main>
         </div>
