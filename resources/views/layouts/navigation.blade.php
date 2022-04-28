@@ -8,7 +8,7 @@
                     <a href="{{ route('home') }}">
                         <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
                     </a>
-                    <p class="text-lg">Spiccoli's Beach Rentals</p>
+                    <p class="text-2xl">Spiccoli's Beach Rentals</p>
                 </div>
 
                 <!-- Navigation Links -->
