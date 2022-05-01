@@ -14,10 +14,10 @@
 
                         <div class="mb-2">
                             @foreach($order->products as $product)
-                                <div>{{ $product->title }} <a href="{{ route('products.downloads.show', $product) }}" class="text-indigo-500">Download</a></div>
+                                <div>{{ $product->title }} </div>
                             @endforeach
                         </div>
-
+                        {{-- <a href="{{ route('products.downloads.show', $product) }}" class="text-indigo-500">Download</a> --}}
                         <div>
                             Total: @money($order->total())
                         </div>
