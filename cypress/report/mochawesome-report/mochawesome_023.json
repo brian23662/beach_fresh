@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-04T03:16:23.645Z",
+    "end": "2022-05-04T03:16:37.981Z",
+    "duration": 14336,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "248ac704-9d36-4a84-a992-98f1f3305838",
+      "title": "",
+      "fullFile": "cypress/integration/sample_spec.js",
+      "file": "cypress/integration/sample_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e1149a91-ed03-4844-a8c3-b2f89f032ef2",
+          "title": "My First Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Visits the Kitchen Sink",
+              "fullTitle": "My First Test Visits the Kitchen Sink",
+              "timedOut": null,
+              "duration": 12234,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://guarded-coast-53681.herokuapp.com/\");\ncy.contains('Surfboard').click(); //Should be on a new URL which includes 'surfboard'\ncy.url().should('include', '/surfboard');\ncy.contains('Add to cart').click();\ncy.contains('Cart').click();\ncy.url().should('include', '/cart');\ncy.contains('Checkout').click();\ncy.url().should('include', '/login');\ncy.contains('Need to register').click();\ncy.url().should('include', '/register');\ncy.get('#name').type(\"testestestes12\");\ncy.get('#email').type(\"test@gmail.com\");\ncy.get('#password').type(\"password\");\ncy.get('#password_confirmation').type(\"password\");\ncy.contains('Register').click();\ncy.contains('The email has already been taken');\ncy.contains(\"Already registered?\").click();\ncy.get('#email').type(\"test@gmail.com\");\ncy.get('#password').type(\"password\");\ncy.contains('Log in').click();\ncy.contains('testestestes12');\ncy.contains('Cart').click();\ncy.contains('Checkout').click();\ncy.url().should('include', '/checkout');\ncy.contains('Pay');",
+              "err": {},
+              "uuid": "ce366a38-05e9-456e-99b1-cddfd04f0f0a",
+              "parentUUID": "e1149a91-ed03-4844-a8c3-b2f89f032ef2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ce366a38-05e9-456e-99b1-cddfd04f0f0a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12234,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

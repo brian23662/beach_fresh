@@ -1,0 +1,16 @@
+{
+    "chromeWebSecurity": false,
+    "video": true,
+    "videoCompression": 32,
+    "videoUploadOnPasses": true,
+    "projectId": "b2bbwg",
+    "cypress_config_file": "./cypress.json",
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+    }
+}
