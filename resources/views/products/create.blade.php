@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    This is a future product
+                    This is a future product create page
                     {{-- <form action="{{ route('cart.products.store') }}" method="post">
                         @csrf
                         <input type="hidden" name="product_id" value="{{ $product->id }}">
