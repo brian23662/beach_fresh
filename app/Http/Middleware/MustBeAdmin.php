@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
+
 class MustBeAdmin
 {
     /**
@@ -16,6 +17,9 @@ class MustBeAdmin
      */
     public function handle(Request $request, Closure $next)
     {
+        if (auth()->guest()) {
+            abort(403);
+        }
         if (auth()->user()->name !== 'Brian Frahm') {
             abort(403);
         }
