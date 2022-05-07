@@ -46,6 +46,6 @@ Route::get('/orders', [OrderController::class, 'index'])
 
 Route::post('/stripe/webhook', [WebhookController::class, 'handleWebhook']);
 
-Route::get('admin/products/create', [ProductController::class, 'create']);
+Route::get('admin/products/create', [ProductController::class, 'create'])->middleware('admin');
 
 require __DIR__ . '/auth.php';
