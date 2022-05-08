@@ -19,9 +19,7 @@
                                 @csrf
                                 @method('DELETE')
                                 {{-- <button class="text-indigo-500">Remove</button> --}}
-                                <x-button class="mt-3 text-red-500">
-                                    Add to cart
-                                </x-button>
+                                <button class="h-10 px-5 m-2 text-red-100 transition-colors duration-150 bg-red-700 rounded-lg focus:shadow-outline hover:bg-red-800">Remove</button>
                             </form>
                         </div>
                     @endforeach
