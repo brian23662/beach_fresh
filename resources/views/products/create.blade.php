@@ -5,20 +5,31 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    This is a future product create page
-                    {{-- <form action="{{ route('cart.products.store') }}" method="post">
-                        @csrf
-                        <input type="hidden" name="product_id" value="{{ $product->id }}">
-                        <x-button class="mt-3">
-                            Add to cart
-                        </x-button>
-                    </form> --}}
+    <section class="px-6 py-8">
+        <x-panel class="max-w-sm mx-auto">
+            <form method="POST" action="/admin/products">
+                @@csrf
+                
+                <div class="mb-6">
+                    <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
+                        for="title"
+                    >
+                        Title
+                    </label>
+                
+                    <input class="border border-gray-400 p-2 w-full"
+                        type="text"
+                        name="title"
+                        id="title"
+                        required
+                    >
+
+                    @error('title')
+                        <p class="text-red-500 text-xs mt-2">{{ $messages }}</p>
+                    @enderror
                 </div>
-            </div>
-        </div>
-    </div>
+            </form>
+        </x-panel>
+    </section>
 </x-app-layout>
+                   
