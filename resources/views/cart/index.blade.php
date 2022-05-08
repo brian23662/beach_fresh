@@ -18,8 +18,10 @@
                             <form action="{{ route('cart.products.destroy', $product) }}" method="post">
                                 @csrf
                                 @method('DELETE')
-                                <button class="text-indigo-500">Remove</button>
-                                <button class="h-10 px-5 m-2 text-red-100 transition-colors duration-150 bg-red-700 rounded-lg focus:shadow-outline hover:bg-red-800">Danger</button>
+                                {{-- <button class="text-indigo-500">Remove</button> --}}
+                                <button class="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
+                                    Remove
+                                </button>
                             </form>
                         </div>
                     @endforeach
