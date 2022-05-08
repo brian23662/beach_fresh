@@ -19,9 +19,11 @@
                                 @csrf
                                 @method('DELETE')
                                 {{-- <button class="text-indigo-500">Remove</button> --}}
-                                <button class="flex space-x-4 bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
-                                    Remove
-                                </button>
+                                <div class="flex space-x-4">
+                                    <button class="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
+                                        Remove
+                                    </button>
+                                </div>
                             </form>
                         </div>
                     @endforeach
