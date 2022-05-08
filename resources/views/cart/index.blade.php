@@ -14,16 +14,16 @@
                             <div class="font-semibold">{{ $product->title }}</div>
 
                             <div>@money($product->price)</div>
-                            <img src="{{ $product->file_path }}"width="150" height="150">    
+                            <div class="flex space-x-4">
+                                 <img src="{{ $product->file_path }}"width="150" height="150"> 
+                            </div>   
                             <form action="{{ route('cart.products.destroy', $product) }}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 {{-- <button class="text-indigo-500">Remove</button> --}}
-                                <div class="flex space-x-4">
-                                    <button class="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
-                                        Remove
-                                    </button>
-                                </div>
+                                <button class="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
+                                    Remove
+                                </button>
                             </form>
                         </div>
                     @endforeach
