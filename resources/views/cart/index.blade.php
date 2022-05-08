@@ -18,7 +18,10 @@
                             <form action="{{ route('cart.products.destroy', $product) }}" method="post">
                                 @csrf
                                 @method('DELETE')
-                                <button class="text-indigo-500">Remove</button>
+                                {{-- <button class="text-indigo-500">Remove</button> --}}
+                                <x-button class="mt-3 text-red-500">
+                                    Add to cart
+                                </x-button>
                             </form>
                         </div>
                     @endforeach
